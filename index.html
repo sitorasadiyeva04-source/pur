@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пользователи</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="controls">
+            <button onclick="fetchUsers()">Загрузка пользователя</button>
+            <button onclick="sortUsers('name')">Сортировка по имени</button>
+            <button onclick="sortUsers('age')">Сортировка по возрасту</button>
+
+            <input 
+                id="filterInput" 
+                placeholder="Фильтр по имени" 
+                oninput="filterUsers()" 
+                type="text"
+            >
+        </div>
+
+        <div class="loader" style="display: none;">
+            <span class="spinner"></span> Загрузка...
+        </div>
+
+        <div id="userList" class="user-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
